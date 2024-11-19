@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const trendingWords = document.getElementById('trendingWords');
     const homeLink = document.getElementById('homeLink');
     const themeToggle = document.querySelector('.theme-toggle');
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
     
     // Dictionary API configuration
     const API_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
@@ -148,4 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize trending words
     createTrendingWordsGrid();
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 }); 

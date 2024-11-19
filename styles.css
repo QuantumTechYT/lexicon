@@ -7,6 +7,9 @@
     --bg-secondary: #f9fafb;
     --shadow-color: rgba(124, 58, 237, 0.1);
     --gradient: linear-gradient(135deg, #7c3aed, #6d28d9);
+    --container-width: 90%;
+    --heading-size: 2rem;
+    --text-size: 1rem;
 }
 
 body.dark-mode {
@@ -36,9 +39,9 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    width: var(--container-width);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 20px;
 }
 
 header {
@@ -638,5 +641,98 @@ button:hover {
 
 .logo:hover {
     transform: translateY(-2px);
+}
+
+/* Mobile phones (default) - 320px to 480px */
+@media screen and (max-width: 480px) {
+    :root {
+        --container-width: 100%;
+        --heading-size: 1.5rem;
+        --text-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Larger phones and small tablets - 481px to 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --container-width: 95%;
+        --heading-size: 1.8rem;
+    }
+}
+
+/* Tablets and small laptops - 769px to 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --container-width: 85%;
+        --heading-size: 2rem;
+    }
+}
+
+/* Large screens and TVs - 1025px and above */
+@media screen and (min-width: 1025px) {
+    :root {
+        --container-width: 80%;
+        --heading-size: 2.5rem;
+        --text-size: 1.1rem;
+    }
+}
+
+/* Extra large screens and TVs - 1600px and above */
+@media screen and (min-width: 1600px) {
+    :root {
+        --container-width: 70%;
+        --heading-size: 3rem;
+        --text-size: 1.2rem;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flexible grid system */
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-size: var(--heading-size);
+}
+
+p, li, a {
+    font-size: var(--text-size);
+}
+
+/* Navigation menu responsiveness */
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Hamburger menu for mobile */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hamburger {
+        display: block;
+    }
 }
   
