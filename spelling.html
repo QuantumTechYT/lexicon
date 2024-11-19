@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Practice | Lexicon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="homeLink" style="cursor: pointer;">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="logo-large.svg" alt="Lexicon" height="40" class="logo">
+                </a>
+            </h1>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <div class="spelling-practice">
+            <h2>Spelling Practice</h2>
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+            <div class="practice-container">
+                <div class="score-display">
+                    Score: <span id="score">0</span> / <span id="totalAttempts">0</span>
+                </div>
+                <div class="current-word">
+                    <div id="wordHint" class="word-hint"></div>
+                    <div id="definitionHint" class="definition-hint"></div>
+                </div>
+                <div class="word-controls">
+                    <button id="playWord" class="play-button">
+                        <i class="fas fa-volume-up"></i>
+                        Play Word
+                    </button>
+                    <button id="showDefinition" class="definition-button">
+                        <i class="fas fa-book"></i>
+                        Show Definition
+                    </button>
+                    <button id="newWord" class="new-word-button">
+                        <i class="fas fa-sync-alt"></i>
+                        New Word
+                    </button>
+                </div>
+                <div class="spelling-input">
+                    <input type="text" id="spellingInput" placeholder="Type the word you hear...">
+                    <button id="checkSpelling">Check Spelling</button>
+                </div>
+                <div id="result" class="result-message"></div>
+                <div id="wordDefinition" class="word-definition"></div>
+            </div>
+        </div>
+    </div>
+    <script src="spelling.js"></script>
+</body>
+</html> 

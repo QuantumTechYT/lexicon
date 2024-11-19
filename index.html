@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexicon | Modern Dictionary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="homeLink" style="cursor: pointer;">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="logo-large.svg" alt="Lexicon" height="40" class="logo">
+                </a>
+            </h1>
+            <div class="header-controls">
+                <a href="spelling.html" class="nav-button">
+                    <i class="fas fa-graduation-cap"></i>
+                    Spelling Practice
+                </a>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </header>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a word...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="trendingWords" class="trending-section">
+            <h2>Trending Words</h2>
+            <div class="word-grid">
+                <!-- Words will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div id="resultsArea"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
